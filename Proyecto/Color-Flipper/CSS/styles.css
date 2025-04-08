@@ -1,0 +1,79 @@
+:root {
+    --header-bg: #FEFCFD;
+    --text-primary: #07BEB8;
+    --btn-text: antiquewhite;
+    --btn-bg: black;
+    --font-family: "Montserrat", sans-serif;
+}
+
+
+body {
+    height: 100vh;
+    margin: 0;
+    background-color: #ffffff;
+    font-family: "Montserrat", sans-serif;
+}
+
+main {
+    text-align: center;
+    margin-top: 10rem;
+}
+
+header {
+    width: 100%;
+    text-align: left;
+    padding: 1rem;
+    background-color: #FEFCFD;
+    color: #07BEB8;
+}
+
+nav {
+    margin-top: -3rem;
+    margin-bottom: 1rem; 
+    text-align: right;
+    color: black;
+}
+
+nav a {
+    text-decoration: none;
+    color: teal;
+    font-size: 1rem;
+    margin: 0rem 2rem;
+    padding: 0.2rem 0.5rem;
+    border-radius: 0.2rem;
+    text-align: right;
+    color: black;
+}
+
+.boton {
+    margin: 1.5rem;
+    padding: 0.8rem 1.5rem;
+    border: 0.2rem solid black;
+    cursor: pointer;
+    background-color: transparent;
+    color: black;
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    border-radius: 0.5rem;
+}
+
+
+h2 {
+    margin-bottom: 5rem;
+}
+
+.color-box  {
+    background-color: black;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 600;
+    padding: 0.8rem 1.5rem;
+    border-radius: 0.5rem;
+    width: 25%; 
+    margin: 0 auto; 
+}
+.color-box span {
+    color: teal;
+    font-weight: 700;
+}
