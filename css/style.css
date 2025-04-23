@@ -1,0 +1,165 @@
+/*VAR*/
+:root {
+    --color-primario: #004466;
+    --color-secundario: #006699;
+    --color-fondo: #fdfdfd;
+    --color-texto: #383232;
+    --color-blanco: #ffffff;
+    --color-gris-claro: #bebcbc;
+    --color-texto-titulo:#0ad2ec;
+  
+    --fuente-principal: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --espaciado: 1rem;
+  }
+  
+  /*Estilo por defecto*/
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /*BODY*/
+  body {
+    font-family: var(--fuente-principal);
+    font-size: 1rem;
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    line-height: 1.6;
+  }
+  
+  /*HEADER Y NAV*/
+  .header {
+    background-color: var(--color-primario);
+    padding: var(--espaciado);
+    color: var(--color-blanco);
+  }
+  
+  .header__nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+  }
+  
+  .header__link {
+    text-decoration: none;
+    color: var(--color-blanco);
+    font-weight: bold;
+  }
+  
+  .header__link:hover {
+    text-decoration: underline;
+  }
+  
+  /*Index*/
+  .main {
+    max-width: 60rem;
+    margin: auto;
+    padding: 2rem;
+  }
+  
+  .txt_titu {
+    text-align: center;
+    font-size: 2rem;
+    color: var(--color-texto-titulo);
+    margin-bottom: 1.5rem;
+  }
+  
+  .main__txt {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    text-align: justify;
+    color: var(--color-texto)
+  }
+  
+  /* IMÁGENES */
+  .image {
+    display: flex;
+    justify-content: center;
+    margin: 2rem 0;
+  }
+  
+  .image__img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 0.5rem;
+  }
+  
+  .sobre-mi__foto {
+    max-width: 20rem;
+  }
+  
+  /*BOTON*/
+  .boton {
+    display: block;
+    margin: 2rem auto;
+    padding: 0.75rem 1.25rem;
+    background-color: var(--color-primario);
+    color: var(--color-blanco);
+    border: none;
+    border-radius: 0.5rem;
+    text-align: center;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  
+  /* SECCIÓN PORFOLIO */
+  .porfolio {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+  
+  .porfolio__itm {
+    background-color: var(--color-gris-claro);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    width: 18rem;
+    text-align: center;
+  }
+  
+  .porfolio__imagen {
+    max-width: 100%;
+    border-radius: 0.5rem;
+  }
+  
+  .porfolio__link {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: var(--color-primario);
+    color: var(--color-blanco);
+    text-decoration: none;
+    border-radius: 0.5rem;
+  }
+  
+  /*SECCIÓN CONTACTO*/
+  .contact__lst {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+  
+  .contact__itm {
+    text-align: center;
+  }
+  
+  .contact__icono {
+    width: 4rem;
+    height: auto;
+    margin-bottom: 0.5rem;
+  }
+  
+  .contact__txt {
+    font-size: 1rem;
+    color: var(--color-primario);
+  }
+  
