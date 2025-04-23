@@ -1,30 +1,34 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <title>Inicio</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Inicio</title>
+  <link rel="stylesheet" href="./css/estilos.css" />
 </head>
 <body>
-
-<header>
-    <h1>Bienvenido a mi página</h1>
-    <a href="index.html"><img src="img/FotoInicio.png" alt="Imagen de inicio"></a>
-    <nav>
-        <ul>
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="Sobre-mi.html">Sobre mí</a></li>
-            <li><a href="Porfolio.html">Porfolio</a></li>
-            <li><a href="Contacto.html">Contacto</a></li>
-        </ul>
+  <header class="header">
+    <nav class="header__nav">
+      <ul>
+        <li><a class="header__link" href="">Inicio</a></li>
+        <li><a class="header__link" href="./html/Sobre-mi.html">Sobre mí</a></li>
+        <li><a class="header__link" href="./html/Porfolio.html">Porfolio</a></li>
+        <li><a class="header__link" href="./html/Contacto.html">Contacto</a></li>
+      </ul>
     </nav>
-    <p>Soy Guilermo Campos González y soy Tecnico micro informatico en rede y montaje con experiencia en diseño web</p>
-</header>
+    <button class="header__button" type="button">Cambiar modo Claro/Oscuro</button>
+  </header>
 
-<main>
-    <form>
-        <button type="button">Cambiar modo Claro/Oscuro</button>
-    </form>
-</main>
-
+  <main class="main">
+    <article>
+      <h1 class="main__title">Guillermo Campos González</h1>
+      <p class="main__paragraph">
+        Soy <span>Guillermo Campos González</span> y soy Técnico microinformático en redes y montaje con experiencia en diseño web.
+      </p>
+    </article>
+    <figure class="image">
+      <img class="image__img" src="./assets/FotoInicio.png" alt="Imagen de inicio" />
+    </figure>
+  </main>
 </body>
 </html>

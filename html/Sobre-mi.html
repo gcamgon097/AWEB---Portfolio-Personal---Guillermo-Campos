@@ -1,47 +1,37 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <title>Sobre mí</title>
+  <meta charset="UTF-8" />
+  <title>Sobre mí</title>
+  <link rel="stylesheet" href="../css/estilos.css" />
 </head>
 <body>
-
-<header>
-    <h1>Sobre mi</h1>
-    <nav>
-        <ul>
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="Sobre-mi.html">Sobre mí</a></li>
-            <li><a href="Porfolio.html">Porfolio</a></li>
-            <li><a href="Contacto.html">Contacto</a></li>
-        </ul>
+  <header class="header">
+    <nav class="header__nav">
+      <ul>
+        <li><a class="header__link" href="../index.html">Inicio</a></li>
+        <li><a class="header__link" href="./Sobre-mi.html">Sobre mí</a></li>
+        <li><a class="header__link" href="./Porfolio.html">Porfolio</a></li>
+        <li><a class="header__link" href="./Contacto.html">Contacto</a></li>
+      </ul>
     </nav>
-</header>
+    <button class="header__button" type="button">Cambiar modo Claro/Oscuro</button>
+  </header>
 
-<main>
-    <a href="Sobre-mi.html"><img src="img/FotoInicio.png" alt="Foto_Sobre-mi"></a>
- 
-    <p>Soy Guillermo Campos González y soy de Puerto Real, Cádiz. Soy
-        técnico de Sistemas Microinformáticos y Redes. Mi campo
-        laboral es la informática. Soy técnico informático porque pienso
-        que es el futuro, aparte de que es lo que me gusta.</p>
-        
-        <p>Puedo trabajar de técnico de ordenadores, tanto de software
-        como de hardware, y también como técnico de red.
-        Además de mi título de grado medio, tengo un B1 en inglés y me
-        estoy formando para presentarme al examen de B2 de inglés.</p>
-        
-        <p>Soy trabajador y trabajo enfocado en los objetivos de la
-        empresa. Me considero una persona flexible a las condiciones
-        que me propongan, asumiendo responsabilidades y riesgos.
-        De los errores aprendo y estoy abierto a aprender.
+  <main class="main">
+    <figure class="image">
+      <img class="image__img sobre-mi__foto" src="../assets/FotoInicio.png" alt="Foto Sobre mí" />
+    </figure>
+
+    <p class="main__paragraph">
+      Soy Guillermo Campos González y soy de Puerto Real, Cádiz. Soy técnico de Sistemas Microinformáticos y Redes. Mi campo laboral es la informática.
     </p>
-    <form>
-        <button type="button">Cambiar modo Claro/Oscuro</button>
-    </form>    
-               
-        
-</main>
-
+    <p class="main__paragraph">
+      Puedo trabajar de técnico de ordenadores, tanto de software como de hardware, y también como técnico de red. Además de mi título de grado medio, tengo un B1 en inglés y me estoy formando para el B2.
+    </p>
+    <p class="main__paragraph">
+      Me considero trabajador, enfocado en los objetivos de la empresa. Asumo responsabilidades, aprendo de los errores y estoy abierto a seguir formándome.
+    </p>
+  </main>
 </body>
 </html>
