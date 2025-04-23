@@ -1,48 +1,45 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <title>Contacto</title>
+  <meta charset="UTF-8" />
+  <title>Contacto</title>
+  <link rel="stylesheet" href="../css/style.css" />
 </head>
 <body>
-<header>
-    <nav>
-        <ul>
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="Sobre-mi.html">Sobre mí</a></li>
-            <li><a href="Porfolio.html">Porfolio</a></li>
-            <li><a href="Contacto.html">Contacto</a></li>
-        </ul>
+  <header class="header">
+    <h1 class="txt_titu">Contacto</h1>
+    <nav class="header__nav">
+      <ul>
+        <li><a class="header__link" href="../index.html">Inicio</a></li>
+        <li><a class="header__link" href="./Sobre-mi.html">Sobre mí</a></li>
+        <li><a class="header__link" href="./Porfolio.html">Porfolio</a></li>
+        <li><a class="header__link" href="./Contacto.html">Contacto</a></li>
+      </ul>
     </nav>
-    <button type="button">Cambiar modo Claro/Oscuro</button>
-</header>
+    <button class="header__button" type="button">Cambiar modo Claro/Oscuro</button>
+  </header>
 
-<main>
-    <nav>
-        <ul>
-            <li>
-                <a href="tel:+34685871564">
-                    <img src="../assets/Whatsapp.png" alt="Icono de Whatsapp" width="500" height="500">
-                </a>
-                <h5> 685 87 15 64 </h5>
-            </li>
-            <li>
-                <a href="mailto:guillecamlez@gmail.com">
-                    <img src="../assets/Gmail_icon_(2020).png" alt="Icono de Gmail" width="32" height="32">
-                </a>
-                <h5> guillecamlez@gmail.com</h5>
-            </li>
-            <li>
-                <a href="https://github.com/gcamgon097">
-                    <img src="../assets/Github.png" alt="Icono de GitHub" width="32" height="32">
-                </a>
-                <h5>GitHub: gcamgon097</h5>
-            </li>
-        </ul>
-    </nav>
-    <form>
-    
-    </form>
-</main>
+  <main class="main">
+    <ul class="contact__lst">
+      <li class="contact__itm">
+        <a href="tel:+34685871564">
+          <img class="contact__icono" src="../assets/Whatsapp.png" alt="WhatsApp" />
+        </a>
+        <p class="contact__txt">685 87 15 64</p>
+      </li>
+      <li class="contact__itm">
+        <a href="mailto:guillecamlez@gmail.com">
+          <img class="contact__icono" src="../assets/Gmail_icon_(2020).png" alt="Gmail" />
+        </a>
+        <p class="contact__txt">guillecamlez@gmail.com</p>
+      </li>
+      <li class="contact__itm">
+        <a href="https://github.com/gcamgon097" target="_blank">
+          <img class="contact__icono" src="../assets/Github.png" alt="GitHub" />
+        </a>
+        <p class="contact__txt">gcamgon097</p>
+      </li>
+    </ul>
+  </main>
 </body>
 </html>
