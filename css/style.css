@@ -7,7 +7,6 @@
     --color-blanco: #ffffff;
     --color-gris-claro: #bebcbc;
     --color-texto-titulo:#0ad2ec;
-  
     --fuente-principal: 'Segoe UI', Tahoma, Verdana, sans-serif;
     --espaciado: 1rem;
   }
@@ -21,15 +20,21 @@
   
   /*BODY*/
   body {
+    width: 100vw;
+    height: 100vh;
     font-family: var(--fuente-principal);
     font-size: 1rem;
     background-color: var(--color-fondo);
     color: var(--color-texto);
     line-height: 1.6;
+    display: flex;
+    flex-wrap: wrap;
   }
   
   /*HEADER Y NAV*/
   .header {
+    width: 100%;
+    height: 20%;
     background-color: var(--color-primario);
     padding: var(--espaciado);
     color: var(--color-blanco);
@@ -55,9 +60,12 @@
   
   /*Index*/
   .main {
-    max-width: 60rem;
+    max-width: 50rem;
+    height: 70%;
     margin: auto;
     padding: 2rem;
+    display: flex;
+    flex-direction: column;
   }
   
   .txt_titu {
@@ -106,28 +114,47 @@
   }
   
   /* SECCIÓN PORFOLIO */
+  .bodyporf{
+    justify-content: center;
+  }
+  .mainporf{
+    width: 70%;
+    height: 60%;
+  }
+
   .porfolio {
+    width: 100%;
+    height: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 2rem;
-    margin-top: 2rem;
+    align-items: center;
+    /* gap: 2rem;
+    margin-top: 2rem; */
   }
   
   .porfolio__itm {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: space-between;
     background-color: var(--color-gris-claro);
     padding: 1rem;
     border-radius: 0.5rem;
-    width: 18rem;
+    width: 100%;
+    height: 100%;
     text-align: center;
   }
   
   .porfolio__imagen {
     max-width: 100%;
+    width: 100%;
+    height: 90%;
     border-radius: 0.5rem;
   }
   
   .porfolio__link {
+    height: 8%;
     display: inline-block;
     margin-top: 1rem;
     padding: 0.5rem 1rem;
