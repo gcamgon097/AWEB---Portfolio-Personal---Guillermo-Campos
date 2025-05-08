@@ -48,6 +48,7 @@
   --fuente-principal: 'Segoe UI', Tahoma, Verdana, sans-serif;
   --espaciado: 1rem;
 }
+
 /*Boton*/
 #boton-clr-osc{
   height: 4%;
@@ -386,3 +387,7 @@ body {
   background-color: #444;
 }
 
+/* Cambiar el css para que se vea la imagen completa en el carrusel*/
+.item1, .item2, .item3, .item4, .item5{
+  display: none;
+}
