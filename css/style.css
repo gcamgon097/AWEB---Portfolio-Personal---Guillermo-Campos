@@ -1,53 +1,58 @@
 /*VAR*/
 :root {
   --color-primario: #004466;
-  --color-secundario: #006699;
-  --color-Contacto: #b6dd08;
-  --color-boton: #fefefe;
-  --color-svg:#000000;
+  --color-secundario: #0077aa;
+  --color-Contacto: #0993dd;
+  --color-boton: #ffffff;
+  --color-svg: #000000;
   --color-link: #ffffff;
   --color-cuadrado: #cecfd6;
-  --color-txt-curr:#000000;
+  --color-txt-curr: #000000;
   --color-fondo: #fdfdfd;
   --color-texto: #101010;
   --color-blanco: #ffffff;
   --color-gris-claro: #bebcbc;
-  --color-texto-titulo:#0ad2ec;
+  --color-texto-titulo: #0ad2ec;
   --fuente-principal: 'Segoe UI', Tahoma, Verdana, sans-serif;
   --espaciado: 1rem;
 }
-.darkmode{
-  --color-primario: #004466;
-  --color-secundario: #006699;
-  --color-Contacto: #b6dd08;
-  --color-boton: #0c0c0c;
-  --color-svg:#ffffff;
-  --color-link: #ffffff;
-  --color-cuadrado: #212f56;
-  --color-txt-curr:#ffffff;
-  --color-fondo: #000000;
-  --color-texto: #fdfdfd;
+
+.darkmode {
+  --color-primario: #070d2b;
+  --color-secundario: #3399cc;
+  --color-Contacto: #3399cc;
+  --color-boton: #111111;
+  --color-svg: #ffffff;
+  --color-link: #55eaff;
+  --color-cuadrado: #0a4559;
+  --color-txt-curr: #19a6d5;
+  --color-fondo: #121212;
+  --color-texto: #ffffff;
   --color-blanco: #050505;
   --color-gris-claro: #040404;
-  --color-texto-titulo:#ffffff;
+  --color-texto-titulo: #ffffff;
   --fuente-principal: 'Segoe UI', Tahoma, Verdana, sans-serif;
   --espaciado: 1rem;
 }
-#darkmode{
+
+#darkmode {
   --color-primario: #004466;
-  --color-secundario: #006699;
-  --color-Contacto: #b6dd08;
-  --color-boton: #000000;
-  --color-svg:#ffffff;
-  --color-link: #ffffff;
-  --color-fondo: #0c0c0c;
+  --color-secundario: #3399cc;
+  --color-Contacto: #0993dd;
+  --color-boton: #111111;
+  --color-svg: #ffffff;
+  --color-link: #55eaff;
+  --color-cuadrado: #1c1c1c;
+  --color-txt-curr: #ffffff;
+  --color-fondo: #121212;
   --color-texto: #fdfdfd;
   --color-blanco: #ffffff;
   --color-gris-claro: #040404;
-  --color-texto-titulo:#ffffff;
+  --color-texto-titulo: #00cce0;
   --fuente-principal: 'Segoe UI', Tahoma, Verdana, sans-serif;
   --espaciado: 1rem;
 }
+
 
 /*Boton*/
 #boton-clr-osc{
@@ -198,14 +203,6 @@ body {
   margin-bottom: 0.5rem;
   color: var(--color-Texto);
 }
-
-
-
-
-
-
-
-
 /*BOTON*/
 .boton {
   display: block;
@@ -221,89 +218,114 @@ body {
 }
 
 /* SECCIÓN PORFOLIO */
-.bodyporf {
-  justify-content: center;
-}
-.mainporf {
-  width: 70%;
-  height: 60%;
-  justify-content: center;
-}
-
+/* CONTENEDOR PRINCIPAL DEL PORTFOLIO */
 .porfolio {
-  width: 100%;
-  height: 100%;
   display: flex;
+  align-items: center;
   justify-content: center;
-  align-items: center;
-  position: relative;
-  overflow: hidden;
-}
-
-.porfolio__car {
-  width: 85%;
-  height: 85%;
-  display: flex;
-  transition: transform 0.5s ease-in-out;
-}
-
-.porfolio__itm {
-  min-width: 100%;
-  height: 100%;
-  background-color: var(--color-gris-claro);
-  border-radius: 0.5rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem;
+  width: 100%;
+  height: 80%; /* 80% del body */
   box-sizing: border-box;
+  background-color: var(--color-fondo);
+  font-family: var(--fuente-principal);
 }
 
-.porfolio__imagen {
-  width: 100%;
-  height: 85%;
-  object-fit: cover;
-  border-radius: 0.5rem;
-}
-
-.porfolio__link {
-  display: inline-block;
-  width: 100%;
-  height: 15%;
-  margin-top: 0.5rem;
-  padding: 0.5rem 1rem;
-  background-color: var(--color-primario);
-  color: var(--color-blanco);
-  text-decoration: none;
-  border-radius: 0.5rem;
-  text-align: center;
-  line-height: 2.5;
-  font-weight: bold;
-}
-
-/* Botones del carrusel */
+/* BOTONES DE NAVEGACIÓN */
 .porfolio__btn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: rgba(0, 0, 0, 0.4);
-  color: white;
+  width: 10%; /* 10% a cada lado */
+  height: 100%;
   border: none;
-  font-size: 2rem;
-  padding: 0.5rem;
+  background: transparent;
+  color: var(--color-texto-titulo);
+  font-size: 3rem;
   cursor: pointer;
-  border-radius: 0.5rem;
+  transition: background 0.3s ease;
   z-index: 1;
 }
 
-.porfolio__btn--prev {
-  left: 1rem;
+.porfolio__btn:hover {
+  background-color: rgba(0, 68, 102, 0.15); /* var(--color-primario) con opacidad */
 }
 
-.porfolio__btn--next {
-  right: 1rem;
+/* CARRUSEL DE PROYECTOS */
+.porfolio__car {
+  width: 70%; 
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+  background-color: var(--color-cuadrado);
+  border-radius: 1rem;
+  padding: var(--espaciado);
 }
+
+/* PROYECTO INDIVIDUAL */
+.porfolio__itm {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  background-color: var(--color-blanco);
+  border-radius: 1.5rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.porfolio__itm.visible {
+  display: flex;
+}
+
+/* IMAGEN DEL PROYECTO */
+.porfolio__imagen {
+  width: 97%;
+  height: 80%;
+  object-fit: contain;
+  border-radius: 0.5rem;
+}
+
+/* ENLACE DEL PROYECTO */
+.porfolio__link {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.8rem 1.5rem;
+  background-color: var(--color-primario);
+  color: var(--color-link);
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 1.5rem;
+  transition: background-color 0.3s ease;
+}
+
+.porfolio__link:hover {
+  background-color: var(--color-secundario);
+}
+
+/* ESTILOS INDIVIDUALES POR PROYECTO */
+#pro1, #pro2, #pro3, #pro4, #pro5 {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  background-color: var(--color-blanco);
+  border-radius: 1.5rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+#pro1.visible,
+#pro2.visible,
+#pro3.visible,
+#pro4.visible,
+#pro5.visible {
+  display: flex;
+}
+
 
 /*SECCIÓN CONTACTO*/
 .contact__lst {
@@ -344,7 +366,7 @@ body {
   font-size: 1.5rem;
   text-align: center;
   margin-bottom: 2%;
-  color: var(--color-primario);
+  color: var(--color-Contacto);
 }
 
 .formulario {
@@ -387,7 +409,3 @@ body {
   background-color: #444;
 }
 
-/* Cambiar el css para que se vea la imagen completa en el carrusel*/
-.item1, .item2, .item3, .item4, .item5{
-  display: none;
-}

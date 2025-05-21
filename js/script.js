@@ -1,65 +1,77 @@
 /*Carrusel*/
-/*Espera a que el contenido del DOM esté completamente cargado*/
+// Espera a que el DOM esté completamente cargado antes de ejecutar el código
+document.addEventListener("DOMContentLoaded", () => {
 
-/* Selección de elementos del carrusel en el DOM */
-const carru = document.querySelector('.porfolio__car'); 
-const items = document.querySelectorAll('.porfolio__itm');
-const prevBtn = document.querySelector('.porfolio__btn--prev'); 
-const nextBtn = document.querySelector('.porfolio__btn--next');
+// Selecciona los proyectos por su ID y los guarda en un array
+const proyectos = [
+  document.getElementById("pro1"),
+  document.getElementById("pro2"),
+  document.getElementById("pro3"),
+  document.getElementById("pro4"),
+  document.getElementById("pro5")
+];
 
-if(carru & items & prevBtn & nextBtn){
-  /*Estado del carrusel */
-  let indiceActual = 0; // Índice del proyecto que se está mostrando
-  const totalProyectos = items.length; // Número total de proyectos en el carrusel
+// Guarda el índice del proyecto que se está mostrando actualmente
+let indiceActual = 0;
 
-  /*Función que actualiza la posición del carrusel*/
-  function actualizarCarrusel() {
-    const desplazamiento = -indiceActual * 100; // Calcula el desplazamiento en %
-    carru.style.transform = `translateX(${desplazamiento}%)`; // Aplica transformación al contenedor
-  }
-
-  /*Evento para botón "Anterior"*/
-  prevBtn.addEventListener('click', () => {
-    indiceActual = (indiceActual - 1 + totalProyectos) % totalProyectos; // Mueve al anterior (cíclico)
-    console.log(indiceActual);
-    console.log(items[indiceActual]);
-    actualizarCarrusel();
-    //Investigar claslist y funcion toogle*/
+// Función para mostrar solo el proyecto correspondiente al índice 
+const mostrarProyecto = (indice) => {
+  proyectos.forEach((proyecto, i) => {
+    if (i === indice) {
+      proyecto.classList.add("visible");   // Muestra el proyecto actual
+    } else {
+      proyecto.classList.remove("visible"); // Oculta los demás proyectos
+    }
   });
+};
 
-  /*Evento para botón "Siguiente" */
-  nextBtn.addEventListener('click', () => {
-    indiceActual = (indiceActual + 1) % totalProyectos; // Mueve al siguiente (cíclico)
-    console.log(indiceActual);
-    console.log(items[indiceActual]);
-    actualizarCarrusel();
-  });
+// Botón para mostrar el siguiente proyecto
+document.querySelector(".porfolio__btn--next").addEventListener("click", () => {
+  // Aumenta el índice y vuelve a 0 si llega al final (ciclo circular)
+  indiceActual = (indiceActual + 1) % proyectos.length;
+  mostrarProyecto(indiceActual);
+});
 
-
-  /*Inicializa el carrusel mostrando el primer proyecto*/
-  actualizarCarrusel();
-
-}
+// Botón para mostrar el proyecto anterior
+document.querySelector(".porfolio__btn--prev").addEventListener("click", () => {
+  // Disminuye el índice y vuelve al último si llega al principio (ciclo circular)
+  indiceActual = (indiceActual - 1 + proyectos.length) % proyectos.length;
+  mostrarProyecto(indiceActual);
+});
+});
 
 
 /*Boton Claro Oscuro*/
+// Obtiene el valor guardado del modo oscuro desde el almacenamiento local del navegador
 let darkmode = localStorage.getItem('darkmode')
-const themeSwitch = document.getElementById('boton-clr-osc')
 
+// Selecciona el botón con el ID 'boton-clr-osc', que se usa para alternar el tema
+const cmb_clr_osc = document.getElementById('boton-clr-osc')
+
+// Función que activa el modo oscuro
 const enableDarkmode = () => {
+  // Agrega la clase 'darkmode' al <body>, lo que activa los estilos oscuros definidos en el CSS
   document.body.classList.add('darkmode')
+  // Guarda el estado 'active' en el almacenamiento local para recordar que está en modo oscuro
   localStorage.setItem('darkmode', 'active')
 }
 
+// Función que desactiva el modo oscuro
 const disableDarkmode = () => {
+  // Elimina la clase 'darkmode' del <body>, volviendo al modo claro
   document.body.classList.remove('darkmode')
+  // Borra el valor guardado en el almacenamiento local (se pone en null)
   localStorage.setItem('darkmode', null)
 }
 
+// Si al cargar la página el valor guardado en localStorage es "active", se activa automáticamente el modo oscuro
 if(darkmode === "active") enableDarkmode()
 
-themeSwitch.addEventListener("click", () => {
+// Evento que escucha el clic en el botón para alternar entre modo claro y oscuro
+cmb_clr_osc.addEventListener("click", () => {
+  // Se actualiza el valor de 'darkmode' desde el almacenamiento local
   darkmode = localStorage.getItem('darkmode')
+  // Si no está activo, se activa el modo oscuro; si ya está activo, se desactiva
   darkmode !== "active" ? enableDarkmode() : disableDarkmode()
 })
 
