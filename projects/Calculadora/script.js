@@ -1,52 +1,52 @@
-// Obtenemos la pantalla de la calculadora y todos los botones
+// Selecciona la pantalla donde se muestra la operación
 const pantalla = document.getElementById("pantalla");
+
+// Selecciona todos los botones de la calculadora
 const botones = document.querySelectorAll(".btn");
 
-// Variables para guardar el estado actual de la operación
-let operacionActual = "";
-let reiniciarPantalla = false;
+// Variables para guardar estado actual
+let operacionActual = "";        // Almacena la operación a evaluar
+let reiniciarPantalla = false;  // Bandera para reiniciar tras "="
 
-// Recorremos todos los botones y les añadimos un evento de clic
-botones.forEach((boton) => {
-  boton.addEventListener("click", () => {
-    const valor = boton.getAttribute("data-valor");
+// Recorre cada botón y agrega un evento al hacer clic
+botones.forEach(function (boton) {
+  boton.addEventListener("click", function () {
+    const valor = boton.getAttribute("data-valor"); // Valor del botón
 
-    // Si se presiona "C", limpiamos todo
+    // Si el botón es "C", resetea todo
     if (valor === "C") {
       operacionActual = "";
       pantalla.textContent = "0";
       return;
     }
 
-    // Si se presiona "=", evaluamos la operación
+    // Si el botón es "=", evalúa la operación
     if (valor === "=") {
-      try {// Intenta evaluar la operación. Si hay error, salta al catch.
-        // Usamos eval para calcular la operación
-        operacionActual = eval(operacionActual).toString();
-        pantalla.textContent = operacionActual;
-        reiniciarPantalla = true;
+      try {
+        operacionActual = eval(operacionActual).toString(); // Evalúa y convierte a string
+        pantalla.textContent = operacionActual; // Muestra resultado
+        reiniciarPantalla = true; // Marca que debe reiniciarse
       } catch {
-        // Si hay un error de sintaxis, mostramos "Error"
-        pantalla.textContent = "Error";
+        pantalla.textContent = "Error"; // Si hay error de sintaxis
         operacionActual = "";
       }
       return;
     }
 
-    // Si se debe reiniciar la pantalla luego de presionar "="
+    // Si hay que reiniciar pantalla tras "="
     if (reiniciarPantalla) {
       operacionActual = "";
       reiniciarPantalla = false;
     }
 
-    // Si la pantalla está en 0 y no estamos escribiendo un punto decimal, reemplazamos el 0
+    // Si pantalla muestra solo "0", reemplazarlo salvo que sea "."
     if (pantalla.textContent === "0" && valor !== ".") {
       pantalla.textContent = valor;
     } else {
-      pantalla.textContent += valor;
+      pantalla.textContent += valor; // Concatenar nuevos valores
     }
 
-    // Concatenamos el valor presionado a la operación actual
+    // Agrega el valor a la cadena de operación
     operacionActual += valor;
   });
 });

@@ -1,15 +1,9 @@
-:root {
-  font-size: 16px;
-}
 
-* {
+body {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
   font-family: system-ui, sans-serif;
-}
-
-body {
   background: #f2f2f2;
   display: flex;
   align-items: center;
@@ -17,7 +11,7 @@ body {
   height: 100vh;
 }
 
-main.calculadora {
+.calculadora {
   background-color: #ffffff;
   width: 90%;
   max-width: 25rem;
@@ -26,7 +20,7 @@ main.calculadora {
   box-shadow: 0 0.625rem 1.5625rem rgba(0, 0, 0, 0.1);
 }
 
-header.pantalla {
+.pantalla {
   background: #111;
   color: #0f0;
   font-size: 2rem;
@@ -37,13 +31,13 @@ header.pantalla {
   min-height: 3.75rem;
 }
 
-section.botones {
+.botones {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 0.625rem;
 }
 
-button.btn {
+.btn {
   font-size: 1.5rem;
   padding: 1rem;
   border: none;
@@ -53,16 +47,16 @@ button.btn {
   cursor: pointer;
 }
 
-button.btn:hover {
+.btn:hover {
   background-color: #ccc;
 }
 
-button.operador {
+.operador {
   background-color: #f39c12;
   color: white;
 }
 
-button.igual {
+.igual {
   background-color: #27ae60;
   color: white;
 }
@@ -70,11 +64,25 @@ button.igual {
 #cero {
   grid-column: span 2;
 }
-.texto {
- display: flex;
- font-family: sans-serif;
- color: #28a745;
- text-decoration: none;
- justify-content: space-around;
- padding-bottom: 2rem;
+
+.volver-portfolio {
+  display: block;
+  margin: 1.5rem auto 2rem auto;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-decoration: none;
+  color: #1e88e5;
+  border: 2px solid #1e88e5;
+  padding: 0.6rem 1.2rem;
+  border-radius: 0.5rem;
+  transition: all 0.3s ease;
+  text-align: center;
 }
+
+.volver-portfolio:hover {
+  background-color: #1e88e5;
+  color: white;
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+

@@ -1,17 +1,23 @@
-const boton_cambio_hex = document.getElementById("boton"); /* Esto sirve para cambiar el color */
-const texto_color_hex = document.querySelector(".color"); /* Selecciona el texto descriptivo del color */
+// Selecciona el botón por su ID
+const boton_cambio_hex = document.getElementById("boton");
 
-function generar_color_hex() {  /* Esta función genera los 20 colores de forma aleatoria en formato hexadecimal*/
-    const caracteres = "0123456789ABCDEF";  /* Establezco los carácteres hexadecimales*/
-    let color = "#";
-    for (let i = 0; i < 6; i++) {
-        color += caracteres[Math.floor(Math.random() * 16)]; 
-    }
-    return color; /* Me devuelve el valor "color" */
+// Selecciona el texto donde se mostrará el color hexadecimal
+const texto_color_hex = document.querySelector(".color");
+
+// Función que genera un color hexadecimal aleatorio
+function generar_color_hex() {
+  const caracteres = "0123456789ABCDEF"; // Caracteres válidos en hex
+  let color = "#"; // Comienza con '#'
+  for (let i = 0; i < 6; i++) {
+    // Añade 6 caracteres al azar
+    color += caracteres[Math.floor(Math.random() * 16)];
+  }
+  return color; // Devuelve el color generado
 }
 
-boton_cambio_hex.addEventListener("click", () => {  /* Con esto permito que al hacer click se genere un nuevo color */
-    const nuevo_color = generar_color_hex();
-    document.body.style.backgroundColor = nuevo_color;
-    texto_color_hex.textContent = nuevo_color;
+// Evento que se ejecuta al hacer clic en el botón
+boton_cambio_hex.addEventListener("click", function () {
+  const nuevo_color = generar_color_hex(); // Genera nuevo color
+  document.body.style.backgroundColor = nuevo_color; // Cambia color de fondo
+  texto_color_hex.textContent = nuevo_color; // Muestra el código en pantalla
 });

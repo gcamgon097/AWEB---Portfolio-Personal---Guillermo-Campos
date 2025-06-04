@@ -1,0 +1,59 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #fefefe;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.frase-container {
+  background-color: #eee8e8;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  max-width: 600px;
+  text-align: center;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3);
+}
+
+.frase-texto {
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 1.5rem;
+}
+
+.btn-frase {
+  padding: 0.7rem 2rem;
+  font-size: 1rem;
+  background-color: #6a5af9;
+  color: white;
+  border: none;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.btn-frase:hover {
+  background-color: #4a3ed4;
+}
+.volver-portfolio {
+  display: block;
+  margin: 1.5rem auto 2rem auto;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-decoration: none;
+  color: #1e88e5;
+  border: 2px solid #1e88e5;
+  padding: 0.6rem 1.2rem;
+  border-radius: 0.5rem;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.volver-portfolio:hover {
+  background-color: #1e88e5;
+  color: white;
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
